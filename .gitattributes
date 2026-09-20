@@ -1,0 +1,15 @@
+# 默认按文本处理，检出时统一 LF；避免 Windows / macOS / Linux 之间
+# 因行尾差异产生整文件 diff。
+* text=auto eol=lf
+
+# 二进制：不做行尾转换，也不做文本 diff。
+# 少了这一行，git 会把 PDF 当文本逐行 diff，仓库历史会被撑爆。
+*.pdf  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.otf  binary
+*.ttf  binary
+
+# GitHub 语言统计
+*.tex linguist-language=TeX
